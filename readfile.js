@@ -3,7 +3,7 @@
 
 var fs = require('fs');
 
-fs.readFile('file.txt', function (err, data) {
+fs.readFile('Data/polyEx.vtk', function (err, data) {
 
   if (err) throw err;
 
@@ -11,13 +11,12 @@ fs.readFile('file.txt', function (err, data) {
 
 var _byteArray = new Uint8Array(data);
 //var newrray = new String(_byteArray, "");
-console.log(_byteArray);
-console.log(_byteArray.length);
+// console.log(_byteArray);
+// console.log(_byteArray.length);
 
-for(var i = 0; _byteArray.length; i++){
+for(var i = 0; i < _byteArray.length; i++){
   console.log(String.fromCharCode(_byteArray[i]));
 }
-
 
 
 });
